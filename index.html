@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>COVID PH UPDATES</title>
+	<meta http-equiv="content-language" content="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta property="og:title" content="PH COVID19 UPDATE">
+	<meta property="og:description" content="Covid19 Filipino Cases">
+	<meta property="og:image" content="virus.png">
+	<meta name="robots" content="index,follow">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+    <header id="c-head">
+        <div id="maxwidth" class="head-con">
+            <a href="#">
+                <h2>
+                    <span class="logo">
+                        <img src="virus.png" alt="">
+                        &nbsp;COVID-PH
+                    </span>
+                </h2>
+            </a>
+            <div class="date-time"></div>
+        </div>
+    </header>
+
+    <div id="maxwidth">
+        <div class="m-container">
+            <nav class="c-nav">
+                <ul>
+                    <li>
+                        <a href="/index.html">•&nbsp;Home</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/spreadsheets/d/16g_PUxKYMC0XjeEKF6FPUBq2-pFgmTkHoj5lbVrGLhE/edit#gid=0">•&nbsp;Spread sheet</a>
+                    </li>
+                    <li>
+                        <a href="/cases.html">•&nbsp;Filipino Cases</a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <!-- PAGINATION -->
+            <main id="swup" class="c-main transion-fade">
+                <!-- CONTENT HEADER -->
+                <div class="grid-con">
+                    <div class="grid-card">
+						<span>
+							<p>Total Cases in PH</p>
+							<h2 id="total-fcases"><i class="fa fa-refresh fa-spin"></i>&nbsp;Loading...</h2>
+						</span>
+						<div class="c-inline">
+							<span class="sub-data">
+								<p>Admitted :</p>
+								<p id="admitted" class="padding-left"></p>
+							</span>
+						</div>
+					</div>
+					<div class="grid-card">
+						<span>
+							<p>Filipino Died</p>
+							<h2 id="total-fdied"><i class="fa fa-refresh fa-spin"></i>&nbsp;Loading...</h2>
+						</span>
+						<div class="c-inline">
+							<span class="sub-data">
+								<p>Deaths today :</p>
+								<p id="d_today" class="padding-left"></p>
+							</span>
+						</div>
+					</div>
+					<div class="grid-card">
+						<span>
+							<p>Filipino Recovered</p>
+							<h2 id="total-frecovered"><i class="fa fa-refresh fa-spin"></i>&nbsp;Loading...</h2>
+						</span>
+						<div class="c-inline">
+							<span class="sub-data">
+								<p>Recoveries today :</p>
+								<p id="r_today" class="padding-left"></p>
+							</span>
+						</div>
+					</div>	
+				</div>
+				
+				<!-- CASES TABLE -->
+				<div class="ph-cases">
+					<h2 class="fct">COVID-19 cases in the Philippines</h2>
+					<div id="c-table" class="table-responsive-md min_fcase">
+						<div class="overlay">
+							<div class="link_c">
+								<a href="/cases.html">
+									View List
+								</a>
+							</div>
+						</div>
+						<table class="c-table table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th><span>Case #</span></th>
+									<th width="130px"><span>Nationality</span></th>
+									<th style="text-align: center;"><span>Age</span></th>
+									<th><span>Sex</span></th>
+									<th><span>Hospital Admitted To</span></th>
+									<th style="text-align: center;"><span>status</span></th>
+								</tr>
+							</thead>
+							<tbody class="f-cases table-cases">
+								<tr>
+									<td colspan="8" style="text-align: center;"><i class="fa fa-refresh fa-spin"></i>&nbsp;Gathering Data...</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- CASES OUTSIDE OF PH -->
+				<div class="c-out-ph">
+					<h2 class="fct">Filipino nationals outside the Philippines</h2>
+					<div id="full-table" class="table-responsive-md min_fcase">
+						<table class="c-table table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th><span>Country Territory</span></th>
+									<th class="bg-warning" style="text-align: center;"><span>Confirmed</span></th>
+									<th class="bg-success" style="text-align: center;"><span>Recovered</span></th>
+									<th class="bg-danger" style="text-align: center;"><span>Died</span></th>
+								</tr>
+							</thead>
+							<tbody class="out-cases">
+								<tr>
+									<td colspan="8" style="text-align: center;"><i class="fa fa-refresh fa-spin"></i>&nbsp;Gathering Data...</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- FOOTER -->
+				<footer>
+					<br>
+					<div class="footer-c">
+						<h4>REFERENCE</h4>
+						<p>1. <a href="https://coronavirus-ph-api.herokuapp.com/#/">https://coronavirus-ph-api.herokuapp.com/</a>- API for Corona Virus.</p>
+						<p>2. <a href="https://www.doh.gov.ph/2019-nCov">https://www.doh.gov.ph/2019-nCov</a>- Department of Health.</p>
+						<p>3. <a href="https://www.countryflags.io/">https://www.countryflags.io/</a>- Countries Flags.</p>
+					</div>
+					<div class="footer-c">
+						<h4>LICENSE & COPYRIGHTS</h4>
+						<p>© <a href="https://web.facebook.com/aughus">Aughus Bueno</a></p>
+						<p>Licensed under the <a href="LICENSE">MIT License.</a>2020.</p>
+					</div>
+				</footer>
+			</main>
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="js/cpage.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+		const swup = new Swup();
+	</script>
+</body>
+</html>
